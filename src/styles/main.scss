@@ -1,0 +1,34 @@
+@use './header.scss';
+
+@font-face {
+  font-family: 'Tilda Sans VF';
+  src: url('../assets/fonts/Tildasansvf.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  font-family: 'Tilda Sans VF', Arial, sans-serif;
+
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: url('../assets/images/bg-pattern.png') repeat;
+    opacity: 0.05;
+    pointer-events: none;
+  }
+}

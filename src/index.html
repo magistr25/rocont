@@ -4,9 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite проект</title>
+    <link rel="stylesheet" href="styles/main.scss">
+    <link rel="preload" href="/src/assets/fonts/TildaSans-VF.woff2" as="font" type="font/woff2" crossorigin>
+
 </head>
 <body>
-<h1>Rocont</h1>
-<script type="module" src="/main.js"></script>
+<div class="app">
+    <header class="header">
+        <img src="assets/images/logo.png"  alt="logo" />
+        <img class="header__menu--burger" src="assets/images/burger-menu.png"  alt="burger-menu" />
+        <nav class="header__menu">
+            <div class="header__menu--content">О средстве</div>
+            <div class="header__menu--content">Состав</div>
+            <div class="header__menu--content">Вопросы</div>
+            <div class="header__menu--content">Отзывы</div>
+            <div class="header__menu--content">Попробовать</div>
+            <div class="header__menu--content">Для своих</div>
+        </nav>
+
+    </header>
+</div>
+
+
+<script type="module" src="./main.js"></script>
 </body>
 </html>
