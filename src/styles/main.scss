@@ -1,5 +1,6 @@
 @use './header.scss';
 @use './video.scss';
+@use './slider.scss';
 
 @font-face {
   font-family: 'Tilda Sans VF';
@@ -15,15 +16,19 @@
   font-style: normal;
   font-display: swap;
 }
-body {
-  font-family: 'Gropled', Arial, sans-serif;
-}
 
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Gropled', Arial, sans-serif;
 }
 
 body {

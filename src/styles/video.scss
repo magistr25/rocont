@@ -40,7 +40,6 @@
   width: 100%;
 }
 
-// Базово ВСЁ скрыто
 .video-section__info__header,
 .video-section__info__text,
 .video-section__info__text_1200 {
@@ -118,7 +117,7 @@
   display: none;
 }
 
-/* video адаптив */
+
 @media (min-width: 320px) {
   .video-section__video {
     padding: 0;
@@ -132,14 +131,16 @@
 }
 
 @media (min-width: 480px) {
+  .video-section__video {
+    margin-top: 10px;
+  }
   .video-section,
   .video-section__video {
     border-radius: 24px;
-    width: 100%;
+
     max-height: 197px;
   }
 
-  /* Показываем заголовок и обычный текст */
   .video-section__info__header {
     display: block;
     font-family: 'Gropled', sans-serif;
@@ -169,7 +170,7 @@
 @media (min-width: 640px) {
   .video-section__video {
     min-height: 311px;
-    margin-top: 68px;
+    margin-top: 98px;
   }
   .video-section__info {
     margin: -60px -20px;
