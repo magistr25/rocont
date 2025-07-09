@@ -260,7 +260,19 @@
     margin-left: calc((100vw - 960px)/2);
   }
 
+
 }
+
+@media (min-width: 960px) {
+  .slider__item:not(:first-child) .slider__caption {
+    display: none !important;
+  }
+  .slider__item:not(:first-child)::after {
+    opacity: 0 !important;
+  }
+}
+
+
 @media (min-width: 1196px) {
   .slider {
     width: 2550.26px;
