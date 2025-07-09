@@ -1,11 +1,22 @@
 @use './header.scss';
+@use './video.scss';
 
 @font-face {
   font-family: 'Tilda Sans VF';
-  src: url('../assets/fonts/Tildasansvf.woff2') format('woff2');
+  src: url('../public/fonts/tildasansvf.ttf') format('woff2');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
+}
+@font-face {
+  font-family: 'Gropled';
+  src: url('../public/fonts/Gropled-Bold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: 'Gropled', Arial, sans-serif;
 }
 
 
@@ -27,8 +38,11 @@ body {
     position: fixed;
     inset: 0;
     z-index: -1;
-    background: url('../assets/images/bg-pattern.png') repeat;
+    background: url('../public/images/bg-pattern.png') repeat;
     opacity: 0.05;
     pointer-events: none;
   }
+}
+main {
+  margin-top: 84px;
 }
