@@ -1,9 +1,11 @@
 .slider {
   width: 640px;
   max-width: 640px;
-  margin: 50px 0 50px 20px;
+  margin: 50px 0 50px 10px;
 }
-
+.slide--hidden {
+  opacity: 0;
+}
 .slider__title {
   font-family: 'Gropled', sans-serif;
   width: 300px;
@@ -152,10 +154,18 @@
     margin-top: 20px;
     touch-action: pan-y;
     user-select: none;
+    height: 320px;
 
+  }
+  .slider__item {
+    height: 320px;
   }
   .slider__title {
     width: 620px;
+  }
+  .slider__box img {
+    border-radius: 24px;
+    height: 320px;
   }
 }
 
@@ -239,6 +249,7 @@
     .arrow--right {
       background-image: url('../public/images/arrow_right.png');
       margin-left: 10px;
+
     }
     .arrow--right:hover {
       background-image: url('../public/images/arrow_right_hover.png');
@@ -291,7 +302,6 @@
     height: 450px;
 
   }
-
 }
 
 @media (min-width: 1300px) {
@@ -300,7 +310,4 @@
     margin-top: 550px;
     margin-left: 30px;
   }
-
-
-
 }

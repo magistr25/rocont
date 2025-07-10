@@ -16,6 +16,16 @@
   left: 0;
   right: 0;
   z-index: 1000;
+  &::before {
+    height: 84px;
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: url('../public/images/bg-pattern.png') repeat;
+    opacity: 0.05;
+    pointer-events: none;
+  }
 
 }
 
@@ -42,6 +52,9 @@
     box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
     padding: 10px 20px;
     box-sizing: border-box;
+    &::before {
+      display: none;
+    }
   }
 
 
@@ -90,8 +103,9 @@
 
 @media (min-width: 1200px) {
   .header {
+    margin: 10px 20px;
     max-width: 96.6%;
-    width: 100%;
+    width: 100vw;
 
   }
 }

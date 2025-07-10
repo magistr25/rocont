@@ -6,14 +6,20 @@ let isAnimating = false;
 function moveNext() {
     if (isAnimating) return;
     isAnimating = true;
+    const firstSlide = sliderBox.firstElementChild;
+
+    // Скрываем плавно первый слайд (через класс, чтобы была transition)
+    firstSlide.classList.add('slide--hidden');
+
     sliderBox.style.transition = 'transform 0.5s cubic-bezier(.4,0,.2,1)';
     sliderBox.style.transform = `translateX(-${slideWidth}px)`;
 
-    // После завершения анимации:
     sliderBox.addEventListener('transitionend', function handler() {
-        // Переносим первый слайд в конец
-        sliderBox.appendChild(sliderBox.firstElementChild);
-        // Убираем смещение (без анимации)
+        // Возвращаем opacity, когда слайд уехал
+        firstSlide.classList.remove('slide--hidden');
+        // Переносим слайд в конец
+        sliderBox.appendChild(firstSlide);
+        // Снимаем смещение
         sliderBox.style.transition = 'none';
         sliderBox.style.transform = 'translateX(0)';
         isAnimating = false;
@@ -21,25 +27,34 @@ function moveNext() {
     });
 }
 
+
 // Назад
 function movePrev() {
     if (isAnimating) return;
     isAnimating = true;
-    // Переносим последний слайд в начало — но сразу делаем -slideWidth!
+    // Переносим последний слайд в начало
+    const lastSlide = sliderBox.lastElementChild;
     sliderBox.style.transition = 'none';
-    sliderBox.insertBefore(sliderBox.lastElementChild, sliderBox.firstElementChild);
+    sliderBox.insertBefore(lastSlide, sliderBox.firstElementChild);
+
+    // Скрываем новый первый слайд
+    lastSlide.classList.add('slide--hidden');
+
     sliderBox.style.transform = `translateX(-${slideWidth}px)`;
-    // Теперь плавно возвращаем к 0
+    // Запускаем плавный возврат к 0
     setTimeout(() => {
         sliderBox.style.transition = 'transform 0.5s cubic-bezier(.4,0,.2,1)';
         sliderBox.style.transform = 'translateX(0)';
-    }, 20);
+    }, 40);
 
     sliderBox.addEventListener('transitionend', function handler() {
+        // Показываем слайд после завершения анимации
+        lastSlide.classList.remove('slide--hidden');
         isAnimating = false;
         sliderBox.removeEventListener('transitionend', handler);
     });
 }
+
 
 // Свайп (touch)
 let startX = 0, moved = false;
