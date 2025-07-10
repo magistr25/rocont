@@ -306,8 +306,26 @@
 
 @media (min-width: 1300px) {
   .slider {
-
-    margin-top: 550px;
-    margin-left: 30px;
+    width: 100%;
+    max-width: none;
+    margin: 550px 30px 50px 10px;
   }
+  .slider__box {
+    display: flex;
+    gap: 8px;
+    overflow: hidden;
+    width: 100%;
+    max-width: none;
+    margin-top: 20px;
+    touch-action: pan-y;
+    user-select: none;
+  }
+  .slider__item {
+    flex: 0 0 250px;
+    height: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+
 }
