@@ -5,10 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Vite проект</title>
     <link rel="stylesheet" href="styles/main.scss">
+    <link rel="preload" as="video" href="./public/video/people.mp4" type="video/mp4">
+    <link rel="preload" href="./public/fonts/tildasansvf.ttf" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./public/fonts/Gropled-Bold.otf" as="font" type="font/woff2" crossorigin>
+
+
 
 </head>
 <body>
-<div class="app">
+<div id="global-preloader">
+  <span class="global-preloader__spinner" aria-label="Загрузка...">
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+      <g>
+        <path d="M7 2h10v2c0 3-3 4-3 7s3 4 3 7v2H7v-2c0-3 3-4 3-7s-3-4-3-7V2z"
+              stroke="#444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="#eee"/>
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12"
+                          dur="1s" repeatCount="indefinite"/>
+      </g>
+    </svg>
+  </span>
+</div>
+
+
+<div class="app ">
     <header class="header">
         <img src="./public/images/logo.png" alt="logo"/>
         <img class="header__menu--burger" src="./public/images/burger-menu.png" alt="burger-menu"/>
@@ -30,8 +49,9 @@
                     muted
                     loop
                     playsinline
+                    preload="auto"
             ></video>
-            <div class="video-section__info">
+            <div class="video-section__info video-section__info--none">
                 <h1 class="video-section__info__header">Просто потому <br> что можем</h1>
                 <p class="video-section__info__text">Мы сделали это средство не ради прибыли,<br>
                     а из любви к красивым словам. Один стик
@@ -422,11 +442,42 @@
         </section>
 
    </main>
+    <footer class="footer">
+        <div class="footer__logo-row">
+            <img src="./public/images/logo.png" alt="logo"/>
+        </div>
+        <nav class="footer__nav">
+            <ul class="footer__nav-list">
+                <li><a href="#" class="footer__nav-link">О&nbsp;системе</a></li>
+                <li><a href="#" class="footer__nav-link">Архитектура</a></li>
+                <li><a href="#" class="footer__nav-link">Для своих</a></li>
+                <li><a href="#" class="footer__nav-link">Состав</a></li>
+                <li><a href="#" class="footer__nav-link">Отзывы</a></li>
+
+            </ul>
+        </nav>
+        <hr class="footer__divider"/>
+        <div class="footer__meta">
+            <p class="footer__copyright">Коллаген © 2025</p>
+            <a href="#" class="footer__policy">Политика обработки чего-то личного</a>
+        </div>
+    </footer>
 
 </div>
 
-
+<script type="module" src="js/video.js"></script>
 <script type="module" src="js/slider.js"></script>
+<script type="module" src="js/form.js"></script>
+<script>
+    window.addEventListener('load', function() {
+        document.getElementById('global-preloader').classList.add('hide');
+        setTimeout(function() {
+            document.getElementById('global-preloader').style.display = 'none';
+            document.getElementById('main-content').style.opacity = '1';
+        }, 500);
+    });
+</script>
+
 </body>
 
 </html>

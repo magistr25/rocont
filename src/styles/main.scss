@@ -3,7 +3,7 @@
 @use './slider.scss';
 @use './cta-form.scss';
 @use './contacts.scss';
-//@use './footer.scss';
+@use './footer.scss';
 
 @font-face {
   font-family: 'Tilda Sans VF';
@@ -53,4 +53,21 @@ body {
 }
 main {
   margin-top: 84px;
+}
+#global-preloader {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s;
+}
+#global-preloader.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+#main-content {
+  transition: opacity 0.5s;
 }
