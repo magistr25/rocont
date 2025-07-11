@@ -13,9 +13,11 @@ npm -v
 
 ## 2. Установка зависимостей
 ```bash
-git clone <URL_репозитория>
-cd <имя_проекта>
+git clone https://github.com/magistr25/rocont.git
+cd <папка_проекта> # по умолчанию: rocont
 npm install
+
+
 ```
 
 ## 3.  Основные npm‑скрипты
