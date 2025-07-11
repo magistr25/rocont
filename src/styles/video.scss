@@ -69,10 +69,11 @@
 }
 
 .video-section__info__button--mobile {
+  all: unset;
+  cursor: pointer;
   color: #1F8B48;
   display: inline-block;
   transition: color 0.2s;
-  cursor: pointer;
 }
 
 .video-section__info__button--mobile {
@@ -204,6 +205,7 @@
 
 
   .video-section__info__button-sert .video-section__info__button {
+    all: unset;
     cursor: pointer;
     color: #1F8B48;
 

@@ -32,7 +32,16 @@
 .header__menu {
   display: none;
 }
+.header__menu--burger {
+  width: 36px;
+  height: 36px;
+  border-radius: 50px;
+  background: white;
+  border: none;
+  all: unset;
+  cursor: pointer;
 
+}
 @media (min-width: 640px) {
   .header {
     height: 68px;
@@ -69,7 +78,7 @@
     justify-content: space-between;
     margin: 20px 60px 20px 0;
   }
-  .header__menu--content {
+  .header__menu-link {
     font-family: 'Tilda Sans VF', Arial, sans-serif;
     line-height: 27px;
     font-size: 16px;
@@ -83,15 +92,15 @@
     border-radius: 40px;
     padding: 8px 16px;
     background: transparent;
-
+    text-decoration: none;
     transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
     padding 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     cursor: pointer;
   }
 
-  .header__menu--content:hover,
-  .header__menu--content:focus-visible {
+  .header__menu-link:hover,
+  .header__menu-link:focus-visible {
     background: #1F8B48;
     color: white;
 
