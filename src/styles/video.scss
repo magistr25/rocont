@@ -8,10 +8,12 @@
 
   &__video {
     width: 100%;
+    min-width: 310px;
     max-width: 1200px;
     height: auto;
     border-radius: 24px;
     object-fit: cover;
+    margin: 0 10px;
   }
 
   &__info {
@@ -124,7 +126,7 @@
   .video-section__video {
     padding: 0;
     margin: 0 10px;
-    width: 100%;
+    min-width: 300px;
     height: auto;
     min-height: 200px;
     border-radius: 24px;
