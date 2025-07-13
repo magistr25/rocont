@@ -244,6 +244,8 @@
       border: none;
       cursor: pointer;
       transition: background-image 0.2s;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .arrow--right {
@@ -251,13 +253,13 @@
       margin-left: 10px;
 
     }
-    .arrow--right:hover {
+    .arrow--right:focus {
       background-image: url('../public/images/arrow_right_hover.png');
     }
     .arrow--left {
       background-image: url('../public/images/arrow_left.png');
     }
-    .arrow--left:hover {
+    .arrow--left:focus {
       background-image: url('../public/images/arrow_left_hover.png');
     }
 
@@ -289,7 +291,7 @@
     width: 2550.26px;
     max-width: 2550.26px;
     margin-top: 300px;
-    margin-left: 30px;
+    margin-left: 0;
   }
   .slider__content {
     width: 2550.26px;
@@ -302,6 +304,9 @@
     width: 300px;
     height: 450px;
 
+  }
+  .slider__item_start__title {
+    font-size: 40px;
   }
 }
 
@@ -330,3 +335,4 @@
 
 
 }
+

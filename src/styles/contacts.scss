@@ -83,36 +83,6 @@
     text-decoration: none;
   }
 
-  &__btn {
-    width: 252px;
-    height: 52px;
-    margin-top: 10px;
-    background: #1F8B48;
-    color: #fff;
-    border: none;
-    border-radius: 100px;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: background 0.2s;
-    font-family: 'Gropled', Arial, sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 110%;
-    vertical-align: bottom;
-    justify-content: space-between;
-
-    &:hover {
-      background: #0D592A !important;
-      transform: scale(1.01);
-    }
-    &:active {
-      background: #1F8B48 !important;
-      transform: scale(0.98);
-    }
-  }
-
   &__map {
     min-width: 300px;
     width: 100%;
@@ -135,6 +105,35 @@
     display: none;
   }
 
+  .contacts__button {
+
+    all: unset;
+    cursor: pointer;
+    color: #1F8B48;
+    display: inline-block;
+    transition: color 0.2s;
+    width: 252px;
+    height: 52px;
+    border: none;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    touch-action: manipulation;
+  }
+
+
+
+  .contacts__button:hover,
+  .contacts__button:focus {
+    color:  #0D592A;
+    transform: scale(1.01);
+  }
+
+  .contacts__button:active {
+    color: #1F8B48;
+    transform: scale(0.98);
+  }
+
   @media (min-width: 480px) {
 
     .contacts__icon--none {
@@ -153,8 +152,8 @@
     &__icon--none {
       margin-left: 20px;
     }
-    &__btn {
-      width: 181px;
+    &__button {
+      width: 167px;
       height: 52px;
     }
     &__list > &__item:first-child &__icon {
@@ -322,27 +321,9 @@
     color:  #2E2D2B;
   }
 
-  &__btn {
+  &__button {
     width: 252px;
     height: 52px;
-    margin-top: 10px;
-    background: #1F8B48;
-    color: #fff;
-    border: none;
-    border-radius: 100px;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: background 0.2s;
-    font-family: 'Gropled', Arial, sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 110%;
-    vertical-align: bottom;
-    justify-content: space-between;
-
-    &:hover { background: #15803d; }
   }
 
   &__map {
@@ -386,7 +367,7 @@
     &__icon--none {
       margin-left: 20px;
     }
-    &__btn {
+    &__button {
       width: 181px;
       height: 52px;
     }
@@ -495,6 +476,22 @@
     min-height: 465px;
   }
 
+}
+
+.cta-form__button {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: transparent;
+  width: 252px;
+  height: 52px;
+  overflow: hidden;
+  position: relative;
+
+  .cta-form__svg {
+    display: block;
+    transition: transform 0.3s ease;
+  }
 }
 
 

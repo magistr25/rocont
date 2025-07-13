@@ -33,15 +33,18 @@
   display: none;
 }
 .header__menu--burger {
-  width: 36px;
-  height: 36px;
-  border-radius: 50px;
-  background: white;
-  border: none;
   all: unset;
   cursor: pointer;
+  transition: color 0.2s,
+  transform 0.22s cubic-bezier(.4, 0, .2, 1);
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  touch-action: manipulation;
 
-}
+  }
+
+
 @media (min-width: 640px) {
   .header {
     height: 68px;
