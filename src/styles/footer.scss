@@ -34,11 +34,12 @@
     transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
     padding 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+    padding: 8px 18px;
 
     &:hover {
       background: #1F8B48;
       color: white;
-      padding: 8px 18px; // Чтобы подсветка была видна
+
     }
   }
 

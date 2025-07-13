@@ -1,5 +1,5 @@
 .cta-form {
-  width:96.6%;
+  width: 96.6%;
   background: #1F8B48;
   border-radius: 24px;
   color: #fff;
@@ -11,7 +11,7 @@
   box-sizing: border-box;
 
   &__title {
-    font-family: 'Gropled',  Arial, sans-serif;
+    font-family: 'Gropled', Arial, sans-serif;
     font-size: 28px;
     line-height: 100%;
     letter-spacing: 0;
@@ -114,48 +114,41 @@
       display: none;
     }
   }
-
-  &__submit {
-    width: 252px;
-    height: 52px;
-    padding: 20px;
-    border-radius: 40px;
-    border: none;
-    background: #fff;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: transform 0.15s cubic-bezier(.34,1.56,.64,1);
-    font-family: 'Gropled',Arial, sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 110.00000000000001%;
-    letter-spacing: 0;
-    vertical-align: bottom;
-    color: #2E2D2B;
-    img {
-      margin-top: 2px;
-    }
-
-    &:hover {
-      background: #f2f2f2;
-      transform: scale(1.01);
-    }
-    &:active {
-      transform: scale(0.98);
-    }
-
-  }
 }
+
 .cta-form__row {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
+
 .cta-form__title {
   width: calc((100%) / 1.1);
 }
+
+.cta-form__button {
+  all: unset;
+  cursor: pointer;
+  color: #FFFFFF;
+  transition: color 0.2s,
+  transform 0.22s cubic-bezier(.4, 0, .2, 1);
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  touch-action: manipulation;
+
+}
+.cta-form__button:hover,
+.cta-form__button:focus {
+  color: #E0E0E9FF;
+  transform: scale(1);
+}
+
+.cta-form__button:active {
+  color: #FFFFFF;
+  transform: scale(0.98);
+}
+
 @media (min-width: 480px) {
   .cta-form {
     padding: 18px;
@@ -173,6 +166,7 @@
     width: calc((100%) / 1.2);
   }
 }
+
 @media (min-width: 640px) {
   .cta-form {
     margin-top: 55px;
@@ -197,14 +191,12 @@
     width: 100%;
 
   }
-  .cta-form__submit {
-    width: 181px;
-  }
 }
+
 @media (min-width: 960px) {
   .cta-form {
-    margin-left: auto ;
-    margin-right: auto ;
+    margin-left: auto;
+    margin-right: auto;
     padding: 40px 30px 30px 30px;
     gap: 20px;
     min-height: 291px;
@@ -235,7 +227,7 @@
     flex-direction: column;
   }
   .cta-form__input {
-   width: 412px;
+    width: 412px;
   }
 }
 
@@ -264,20 +256,15 @@
     flex-direction: row;
     gap: 140px;
   }
-  .cta-form__submit {
-    width: 192px;
-    height: 52px;
-    img {
-      margin-top: 3px;
-    }
-  }
 
 }
+
 @media (min-width: 1500px) {
   .cta-form__columns {
     display: flex;
     flex-direction: row;
     gap: 400px;
-    justify-content:  flex-start;
+    justify-content: flex-start;
   }
 }
+
